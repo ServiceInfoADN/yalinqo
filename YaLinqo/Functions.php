@@ -1,12 +1,5 @@
 <?php
 
-/**
- * Functions class.
- * @author Alexander Prokhorov
- * @license Simplified BSD
- * @link https://github.com/Athari/YaLinqo YaLinqo on GitHub
- */
-
 namespace YaLinqo;
 
 /**
@@ -81,10 +74,8 @@ class Functions
     {
         self::$identity = function($x) { return $x; };
 
-        /** @noinspection PhpUnusedParameterInspection */
         self::$key = function($v, $k) { return $k; };
 
-        /** @noinspection PhpUnusedParameterInspection */
         self::$value = function($v, $k) { return $v; };
 
         self::$true = function() { return true; };

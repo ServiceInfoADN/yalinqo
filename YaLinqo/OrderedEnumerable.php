@@ -1,12 +1,5 @@
 <?php
 
-/**
- * OrderedEnumerable class.
- * @author Alexander Prokhorov
- * @license Simplified BSD
- * @link https://github.com/Athari/YaLinqo YaLinqo on GitHub
- */
-
 namespace YaLinqo;
 
 /**
@@ -42,6 +35,7 @@ class OrderedEnumerable extends Enumerable
      */
     public function __construct($source, $sortOrder, $sortFlags, $isReversed, $keySelector, $comparer, $parent = null)
     {
+        parent::__construct($source->getIterator());
         $this->source = $source;
         $this->sortOrder = $sortOrder;
         $this->sortFlags = $sortFlags;

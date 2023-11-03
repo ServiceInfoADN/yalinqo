@@ -1,12 +1,5 @@
 <?php
 
-/**
- * Global functions and initialization.
- * @author Alexander Prokhorov
- * @license Simplified BSD
- * @link https://github.com/Athari/YaLinqo YaLinqo on GitHub
- */
-
 \YaLinqo\Functions::init();
 \YaLinqo\Utils::init();
 

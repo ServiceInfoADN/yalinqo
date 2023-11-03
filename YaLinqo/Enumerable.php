@@ -1,12 +1,5 @@
 <?php
 
-/**
- * Enumerable class.
- * @author Alexander Prokhorov
- * @license Simplified BSD
- * @link https://github.com/Athari/YaLinqo YaLinqo on GitHub
- */
-
 namespace YaLinqo;
 
 // Differences: preserving keys and toSequental, *Enum for keywords, no (el,i) overloads, string lambda args (v,k,a,b,e etc.), toArray/toList/toDictionary, objects as keys, docs copied and may be incorrect, elementAt uses key instead of index, @throws doc incomplete, aggregater default seed is null not undefined, call/each, InvalidOperationException => UnexpectedValueException
@@ -34,7 +27,7 @@ class Enumerable implements \IteratorAggregate
      * @param \Closure|\Iterator $iterator
      * @param bool $isClosure
      */
-    private function __construct($iterator, $isClosure = true)
+    public function __construct($iterator, $isClosure = true)
     {
         $this->iterator = $isClosure ? $iterator() : $iterator;
     }
@@ -283,9 +276,7 @@ class Enumerable implements \IteratorAggregate
         $inner = self::from($inner);
         $outerKeySelector = Utils::createLambda($outerKeySelector, 'v,k', Functions::$key);
         $innerKeySelector = Utils::createLambda($innerKeySelector, 'v,k', Functions::$key);
-        /** @noinspection PhpUnusedParameterInspection */
         $resultSelectorValue = Utils::createLambda($resultSelectorValue, 'v,e,k', function($v, $e, $k) { return [ $v, $e ]; });
-        /** @noinspection PhpUnusedParameterInspection */
         $resultSelectorKey = Utils::createLambda($resultSelectorKey, 'v,e,k', function($v, $e, $k) { return $k; });
 
         return new self(function() use ($inner, $outerKeySelector, $innerKeySelector, $resultSelectorValue, $resultSelectorKey) {
@@ -317,9 +308,7 @@ class Enumerable implements \IteratorAggregate
         $inner = self::from($inner);
         $outerKeySelector = Utils::createLambda($outerKeySelector, 'v,k', Functions::$key);
         $innerKeySelector = Utils::createLambda($innerKeySelector, 'v,k', Functions::$key);
-        /** @noinspection PhpUnusedParameterInspection */
         $resultSelectorValue = Utils::createLambda($resultSelectorValue, 'v1,v2,k', function($v1, $v2, $k) { return [ $v1, $v2 ]; });
-        /** @noinspection PhpUnusedParameterInspection */
         $resultSelectorKey = Utils::createLambda($resultSelectorKey, 'v1,v2,k', function($v1, $v2, $k) { return $k; });
 
         return new self(function() use ($inner, $outerKeySelector, $innerKeySelector, $resultSelectorValue, $resultSelectorKey) {
@@ -1140,7 +1129,6 @@ class Enumerable implements \IteratorAggregate
      * Output all the sequence values, with a new line after each element.
      * <p><b>Syntax</b>: writeLine ([selector])
      * @param callable|null $selector {(v, k) ==> value} A transform function to apply to each element. Default: value.
-     * @return string
      * @see echo, PHP_EOL
      * @package YaLinqo\Actions
      */

@@ -1,18 +1,5 @@
 # *YaLinqo: Yet Another LINQ to Objects for PHP*
 
-[![Travis CI Status](https://img.shields.io/travis/Athari/YaLinqo.svg)](https://travis-ci.org/Athari/YaLinqo)
-[![Coveralls Coverage](https://img.shields.io/coveralls/Athari/YaLinqo/master.svg)](https://coveralls.io/r/Athari/YaLinqo)
-[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/Athari/YaLinqo.svg)](https://scrutinizer-ci.com/g/Athari/YaLinqo)
-[![SensioLabs Insight Check](https://img.shields.io/sensiolabs/i/d1273f86-85e3-4076-a037-a40062906329.svg)](https://insight.sensiolabs.com/projects/d1273f86-85e3-4076-a037-a40062906329)
-[![VersionEye Dependencies](https://www.versioneye.com/php/athari:yalinqo/badge.svg)](https://www.versioneye.com/php/athari:yalinqo)<br>
-[![Packagist Downloads](https://img.shields.io/packagist/dt/athari/yalinqo.svg)](https://packagist.org/packages/athari/yalinqo)
-[![VersionEye References](https://www.versioneye.com/php/athari:yalinqo/reference_badge.svg)](https://www.versioneye.com/php/athari:yalinqo/references)
-[![Packagist Version](https://img.shields.io/packagist/v/athari/yalinqo.svg)](https://packagist.org/packages/athari/yalinqo)
-[![GitHub License](https://img.shields.io/github/license/Athari/YaLinqo.svg)](license.md)
-
-* [**Online documentation**](http://athari.github.io/YaLinqo)
-* [**GitHub repository**](https://github.com/Athari/YaLinqo)
-
 Features
 ========
 
@@ -148,10 +135,7 @@ Array (
 
 Requirements
 ============
-
-* Version 1 (stable): PHP 5.3 or higher.
-* Version 2 (stable): PHP 5.5 or higher.
-* Version 3 (pre-alpha): PHP 7.0 or higher.
+PHP 7.4 or higher.
 
 Usage
 =====
@@ -161,7 +145,7 @@ Add to `composer.json`:
 ```json
 {
     "require": {
-        "athari/yalinqo": "^2.0"
+        "serviceinfoadn/yalinqo": "^1.0.0"
     }
 }
 ```
@@ -176,35 +160,3 @@ use \YaLinqo\Enumerable;
 Enumerable::from(array(1, 2, 3));
 from(array(1, 2, 3));
 ```
-
-License
-=======
-
-[**Simplified BSD License**](license.md)  
-Copyright © 2012–2018, Alexander Prokhorov  
-All rights reserved.
-
-Links
-=====
-
-### YaLinqo Articles
-
-* **CodeProject** *(English):*
-  * [LINQ for PHP comparison: YaLinqo, Ginq, Pinq](http://www.codeproject.com/Articles/997238/LINQ-for-PHP-comparison-YaLinqo-Ginq-Pinq) — performance comparison of full-featured LINQ ports, with some additional information.
-
-* **Habrahabr** *(Russian):*
-  * [Comparison of old LINQ libraries](http://habrahabr.ru/post/147612/) — comparison of *LINQ for PHP*, *Phinq*, *PHPLinq* and *Plinq*, also *Underscore.php*.
-  * [YaLinqo 1.0 with updated comparison](http://habrahabr.ru/post/147848/) — explanation of architecture and design decisions.
-  * [YaLinqo 2.0](http://habrahabr.ru/post/229763/) — switch to PHP 5.5 with generators support and related changes.
-  * [LINQ for PHP: speed matters](http://habrahabr.ru/post/259155/) — performance comparison of full-featured LINQ ports (YaLinqo, Ginq, Pinq).
-
-* **Other** *(English):*
-  * Tute Wall: [How to use Linq in PHP](http://tutewall.com/how-to-use-linq-in-php-part-01/) by *Mr. X* — a series of posts covering basic usage of YaLinqo. 
-
-### Related projects
-
-* [**linq.js**](http://linqjs.codeplex.com/) — LINQ for JavaScript. The one and only complete port of .NET LINQ to JavaScript.
-* [**Underscore.js**](http://documentcloud.github.com/underscore/) — library for functional programming in JavaScript. Similar to LINQ, but different method names and no lazy evaluation.
-* [**Underscore.php**](http://brianhaveri.github.com/Underscore.php/) — port of Underscore.js to PHP.
-* [**RxPHP**](https://github.com/ReactiveX/RxPHP) — reactive (push) counterpart of the active (pull) LINQ, port of Rx.NET.
-* [**YaLinqoPerf**](https://github.com/Athari/YaLinqoPerf) — collection of performance tests comparing raw PHP, array functions, YaLinqo, YaLinqo with string lambdas, Ginq, Ginq with property accessors, Pinq.

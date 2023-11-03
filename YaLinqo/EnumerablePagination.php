@@ -1,12 +1,5 @@
 <?php
 
-/**
- * EnumerablePagination trait of Enumerable class.
- * @author Alexander Prokhorov
- * @license Simplified BSD
- * @link https://github.com/Athari/YaLinqo YaLinqo on GitHub
- */
-
 namespace YaLinqo;
 
 /**

@@ -1,12 +1,5 @@
 <?php
 
-/**
- * Utils class.
- * @author Alexander Prokhorov
- * @license Simplified BSD
- * @link https://github.com/Athari/YaLinqo YaLinqo on GitHub
- */
-
 namespace YaLinqo;
 
 /**
@@ -151,7 +144,7 @@ class Utils
             $code = trim($code, " \r\n\t");
             if (strlen($code) > 0 && $code[0] != '{')
                 $code = "return {$code};";
-            $fun = @create_function($args, $code);
+            $fun = eval("return function({$args}) { {$code} };");
             // @codeCoverageIgnoreStart
             if (!$fun)
                 throw new \InvalidArgumentException(self::ERROR_CANNOT_PARSE_LAMBDA);
