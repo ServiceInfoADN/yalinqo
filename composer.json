@@ -1,5 +1,6 @@
 {
     "name": "serviceinfoadn/yalinqo",
+    "version": "1.0.0",
     "description": "YaLinqo, a LINQ-to-objects library for PHP",
     "license": "BSD-2-Clause",
     "keywords": ["linq", "linqo", "query", "statistic"],
